@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+
+Route::get('World', function(){
+    return 'World';
+});
+
+Route::get('/', function(){
+    return 'Selamat Datang';
+});
+
+Route::get('/about', function(){
+    return 'NIM: 2341720250, Nama: Afifah Khoirunnisa';
 });
