@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,13 +84,15 @@ Route::domain('{account}.example.com')->group(function(){
 //     Route::get('/event', [UserController::class, 'index']);
 // });
 
-// Route::prefix('admin')->group(function () { 
-//     Route::get('/user', [UserController::class, 'index']); 
-//     Route::get('/post', [PostController::class, 'index']); 
+// Route::prefix('admin')->group(function () {
+//     Route::get('/user', [UserController::class, 'index']);
+//     Route::get('/post', [PostController::class, 'index']);
 //     Route::get('/event', [EventController::class, 'index']);
 // });
 
 // Route::redirect('/here', '/there');
-// Route::view('/welcome', 'welcome'); 
+// Route::view('/welcome', 'welcome');
 // Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+
+Route::get('/hello', [WelcomeController::class,'hello']);
 
