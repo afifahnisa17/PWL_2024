@@ -60,3 +60,36 @@ Route::get('/user/{name?', function($name='John'){
 Route::get('/user/profile', function(){
     //
 })->name('profile');
+
+Route::middleware(['first', 'second'])->group(function () {
+    Route::get('/', function(){
+        return 'first-second';
+    });
+
+    Route::get('/user/profile', function(){
+        return'nama saya afi';
+    });
+});
+
+Route::domain('{account}.example.com')->group(function(){
+    Route::get('user/{id}', function ($account, $id){
+        return 'Akun: $account, $id';
+    });
+});
+
+// Route::middleware('auth')->group(function(){
+//     Route::get('/user', [UserController::class, 'index']);
+//     Route::get('/post', [UserController::class, 'index']);
+//     Route::get('/event', [UserController::class, 'index']);
+// });
+
+// Route::prefix('admin')->group(function () { 
+//     Route::get('/user', [UserController::class, 'index']); 
+//     Route::get('/post', [PostController::class, 'index']); 
+//     Route::get('/event', [EventController::class, 'index']);
+// });
+
+// Route::redirect('/here', '/there');
+// Route::view('/welcome', 'welcome'); 
+// Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+
