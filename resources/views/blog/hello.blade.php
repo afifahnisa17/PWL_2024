@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Hello, {{$name}}</h1>
-    <h1>How about career in data science?</h1>
+    <h1>You are {{$occupation}}</h1>
 </body>
 </html>
