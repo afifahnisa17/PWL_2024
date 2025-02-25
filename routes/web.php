@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,4 +99,19 @@ Route::domain('{account}.example.com')->group(function(){
 // Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 
 Route::get('/hello', [WelcomeController::class,'hello']);
+Route::get('/', [PageController::class,'hello']);
+Route::get('/index', [PageController::class,'index']);
+Route::get('/about', [PageController::class,'about']);
+
+
+
+// Route::get('/index', [HomeController::class,'index']);
+// Route::get('/about', [AboutController::class,'about']);
+// Route::get('/articles/{id}', [ArticleController::class,'articles']);
+
+
+
+
+
+
 
