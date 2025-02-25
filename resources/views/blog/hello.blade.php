@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Hello, {{$name}}</h1>
+    <h1>You will be a great programmer in the future!</h1>
 </body>
 </html>
