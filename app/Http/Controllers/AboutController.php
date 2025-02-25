@@ -10,3 +10,6 @@ class AboutController extends Controller
         return 'Nama: Afifah Khoirunnisa, NIM: 2341720250';
     }
 }
+
+?>
+

@@ -46,9 +46,9 @@ Route::get('/posts/{post}/comments/{comment}', function($postId, $commentId){
     return 'Post ke-'.$postId." Komentar ke-: ".$commentId;
 });
 
-Route::get('/articles/{id}', function($postId){
-    return 'Halaman Artikel dengan ID: '. $postId;
-});
+// Route::get('/articles/{id}', function($postId){
+//     return 'Halaman Artikel dengan ID: '. $postId;
+// });
 
 Route::get('user/{name?}', function ($name=null){
     return 'Nama saya '. $name;
@@ -98,16 +98,17 @@ Route::domain('{account}.example.com')->group(function(){
 // Route::view('/welcome', 'welcome');
 // Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 
-Route::get('/hello', [WelcomeController::class,'hello']);
-Route::get('/', [PageController::class,'hello']);
-Route::get('/index', [PageController::class,'index']);
-Route::get('/about', [PageController::class,'about']);
+// Route::get('/hello', [WelcomeController::class,'hello']);
+// Route::get('/', [PageController::class,'hello']);
+// Route::get('/index', [PageController::class,'index']);
+// Route::get('/about', [PageController::class,'about']);
+// Route::get('/articles/{id}', [PageController::class, 'articles']);
 
 
 
-// Route::get('/index', [HomeController::class,'index']);
-// Route::get('/about', [AboutController::class,'about']);
-// Route::get('/articles/{id}', [ArticleController::class,'articles']);
+Route::get('/index', [HomeController::class,'index']);
+Route::get('/about', [AboutController::class,'about']);
+Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 
 
